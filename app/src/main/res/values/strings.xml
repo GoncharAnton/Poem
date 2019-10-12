@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Poem</string>
+    <string name="button_label">Read poem</string>
+</resources>
