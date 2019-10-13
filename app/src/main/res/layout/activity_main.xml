@@ -19,22 +19,11 @@
                 android:id="@+id/poem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/indent"
-                android:layout_marginTop="@dimen/indent"
-                android:layout_marginRight="@dimen/indent"
-                android:textSize="@dimen/text_size" />
+                android:layout_marginLeft="@dimen/indent_allContent"
+                android:layout_marginTop="@dimen/indent_allContent"
+                android:layout_marginRight="@dimen/indent_allContent"
+                android:textSize="@dimen/textSize_allContent" />
         </LinearLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/indent"
-        android:layout_marginEnd="@dimen/indent"
-        android:layout_marginRight="@dimen/indent"
-        android:text="@string/button_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

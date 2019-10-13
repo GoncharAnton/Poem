@@ -1,7 +1,6 @@
 package com.gonchar.project.poem
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.BufferedReader
 import java.io.IOException
@@ -10,15 +9,20 @@ import java.lang.StringBuilder
 
 class MainActivity : AppCompatActivity() {
 
+    /**
+     * this method create instance state
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        button.setOnClickListener{
-            button.visibility = View.INVISIBLE
-            poem.text = readText()
-        }
+        //fill the TextView “poem” with content which was reading from the file
+        poem.text = readText()
     }
 
+    /**
+     * this method read text from file "poem.txt"
+     * this file located in assets folder
+     */
     private fun readText(): CharSequence? {
         val sb = StringBuilder()
         val reader = BufferedReader(InputStreamReader(assets.open("poem.txt")))
@@ -37,17 +41,22 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * this method used for save instance state.
+     * It make possible restore instance state if it was destroyed
+     */
     override fun onSaveInstanceState(outState: Bundle) {
         outState.run {
             putString("textView",poem.text.toString())
-            putInt("button", button.visibility)
         }
         super.onSaveInstanceState(outState)
     }
 
+    /**
+     * this method restore instance state if it was destroyed
+     */
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
-        button.visibility = savedInstanceState.getInt("button")
         poem.text = savedInstanceState.getString("textView")
     }
 }
