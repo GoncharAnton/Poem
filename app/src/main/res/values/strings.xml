@@ -1,4 +1,3 @@
 <resources>
     <string name="manifest_appName">Poem</string>
-    <string name="activity_fileName">poem.txt</string>
 </resources>
