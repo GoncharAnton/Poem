@@ -1,6 +1,4 @@
-﻿1. гит игнор (найти нормальный гит игнор файл)
-
-# Compiled class file
+﻿# Compiled class file
 *.class
 
 # Log file
