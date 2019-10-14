@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
      */
     private fun readText(): CharSequence? {
         val sb = StringBuilder()
-        val reader = BufferedReader(InputStreamReader(assets.open("poem.txt")))
+        val reader = BufferedReader(InputStreamReader(assets.open(getString(R.string.activity_fileName))))
         try {
             var mLine : String?
             mLine = reader.readLine()
